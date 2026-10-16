@@ -1,0 +1,22 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+backend/.env
+
+# Python
+venv/
+.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Editor and logs
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,47 @@
+
+.location-picker {
+  width: 100%;
+  margin: 14px 0 20px;
+}
+
+.current-location-btn {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+
+  border: 1px solid #cfe5d9;
+  border-radius: 12px;
+  background: #edf7f0;
+  color: #075b43;
+
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.current-location-btn:hover:not(:disabled) {
+  background: #dcefe3;
+  transform: translateY(-1px);
+}
+
+.current-location-btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.location-message {
+  margin: 9px 2px 0;
+  color: #b45309;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.location-message.location-success {
+  color: #087443;
+}
