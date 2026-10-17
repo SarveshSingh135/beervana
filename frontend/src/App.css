@@ -3353,3 +3353,188 @@ button, input, select, textarea { max-width: 100%; }
   body .app > header.navbar > .nav-links.mobile-menu-open { display: flex !important; position: absolute; top: calc(100% + 4px); right: 8px; z-index: 1200; width: min(220px, calc(100vw - 16px)); flex-direction: column; align-items: stretch; gap: 3px; margin: 0 !important; padding: 8px !important; background: #00291f; border: 1px solid #27584a; border-radius: 10px; box-shadow: 0 12px 28px #0005; overflow: visible !important; }
   body .app > header.navbar > .nav-links.mobile-menu-open button { display: flex !important; width: 100%; flex: 0 0 auto !important; padding: 10px 9px !important; text-align: left; font-size: 11px !important; }
 }
+
+
+/* =========================================
+   RESPONSIVE CUSTOMER ACCOUNT MODAL + TABS
+   Isolated from checkout and other modals
+========================================= */
+.account-modal {
+  width: min(560px, 100%);
+  max-height: min(880px, calc(100vh - 40px));
+  max-height: min(880px, calc(100dvh - 40px));
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.account-modal .checkout-body {
+  width: 100%;
+  min-width: 0;
+}
+
+.account-modal .checkout-section {
+  width: 100%;
+  min-width: 0;
+}
+
+.auth-tabs {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 6px;
+  width: 100%;
+  margin: 0 0 22px;
+  padding: 5px;
+  border: 1px solid #e3e8df;
+  border-radius: 12px;
+  background: #f1f4ee;
+}
+
+.auth-tabs .auth-tab {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #34483e;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-tabs .auth-tab.active {
+  background: #003d2f;
+  color: #fff;
+  border-color: #003d2f;
+  box-shadow: 0 3px 9px rgba(0, 61, 47, 0.16);
+}
+
+.auth-tabs .auth-tab:focus-visible {
+  outline: 3px solid rgba(255, 210, 31, 0.85);
+  outline-offset: 2px;
+}
+
+.account-modal form {
+  width: 100%;
+  min-width: 0;
+}
+
+.account-modal .checkout-field input {
+  min-height: 48px;
+}
+
+@media (min-width: 801px) {
+  .account-modal {
+    width: min(560px, calc(100vw - 64px));
+  }
+}
+
+@media (min-width: 521px) and (max-width: 800px) {
+  .modal-overlay:has(.account-modal) {
+    padding: 24px !important;
+  }
+
+  .account-modal {
+    width: min(520px, 100%);
+    max-height: calc(100vh - 48px);
+    max-height: calc(100dvh - 48px);
+  }
+
+  .account-modal .checkout-header {
+    padding: 22px;
+  }
+
+  .account-modal .checkout-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .modal-overlay:has(.account-modal) {
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px !important;
+  }
+
+  .account-modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 20px);
+    max-height: calc(100dvh - 20px);
+    border-radius: 14px;
+  }
+
+  .account-modal .checkout-header {
+    padding: 17px 16px;
+    gap: 12px;
+  }
+
+  .account-modal .checkout-header h2 {
+    font-size: clamp(18px, 5vw, 21px);
+    overflow-wrap: anywhere;
+  }
+
+  .account-modal .checkout-header > button {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .account-modal .checkout-body {
+    padding: 12px;
+  }
+
+  .account-modal .checkout-section {
+    padding: 14px 12px;
+  }
+
+  .auth-tabs {
+    gap: 5px;
+    margin-bottom: 18px;
+    padding: 4px;
+  }
+
+  .auth-tabs .auth-tab {
+    min-height: 43px;
+    padding: 9px 6px;
+    font-size: 13px;
+  }
+
+  .account-modal .checkout-field {
+    margin-bottom: 14px;
+  }
+
+  .account-modal .checkout-field input {
+    min-height: 46px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .account-modal .checkout-header {
+    padding: 14px 12px;
+  }
+
+  .account-modal .checkout-body {
+    padding: 9px;
+  }
+
+  .account-modal .checkout-section {
+    padding: 12px 9px;
+  }
+
+  .auth-tabs .auth-tab {
+    font-size: 12px;
+    padding-inline: 4px;
+  }
+}

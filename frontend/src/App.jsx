@@ -4019,7 +4019,7 @@ function App() {
       {accountOpen && (
         <div className="modal-overlay" onClick={() => setAccountOpen(false)}>
           <div
-            className="checkout-modal"
+            className="checkout-modal account-modal"
             role="dialog"
             aria-modal="true"
             aria-labelledby="account-heading"
@@ -4050,9 +4050,25 @@ function App() {
                 </div>
               ) : (
                 <div className="checkout-section">
-                  <div className="payment-options" style={{ marginBottom: 18 }}>
-                    <button type="button" className={`payment-option ${authMode === "login" ? "active" : ""}`} onClick={() => { setAuthMode("login"); setAuthMessage(""); }}>Login</button>
-                    <button type="button" className={`payment-option ${authMode === "register" ? "active" : ""}`} onClick={() => { setAuthMode("register"); setAuthMessage(""); }}>Create Account</button>
+                  <div className="auth-tabs" role="tablist" aria-label="Account options">
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={authMode === "login"}
+                      className={`auth-tab ${authMode === "login" ? "active" : ""}`}
+                      onClick={() => { setAuthMode("login"); setAuthMessage(""); }}
+                    >
+                      Login
+                    </button>
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={authMode === "register"}
+                      className={`auth-tab ${authMode === "register" ? "active" : ""}`}
+                      onClick={() => { setAuthMode("register"); setAuthMessage(""); }}
+                    >
+                      Create Account
+                    </button>
                   </div>
                   <form onSubmit={submitAuth}>
                     {authMode === "register" && (
