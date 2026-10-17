@@ -4,11 +4,11 @@ import "./AdminDashboard.css";
 
 
 
-const ADMIN_ORDERS_API = "http://127.0.0.1:8000/admin/orders";
 
-const UPDATE_STATUS_API = "http://127.0.0.1:8000/admin/orders";
+const ADMIN_ORDERS_API = "https://beervana.onrender.com/admin/orders";
+const UPDATE_STATUS_API = "https://beervana.onrender.com/admin/orders";
+const ADMIN_PRODUCTS_API = "https://beervana.onrender.com/admin/products";
 
-const ADMIN_PRODUCTS_API = "http://127.0.0.1:8000/admin/products";
 
 
 

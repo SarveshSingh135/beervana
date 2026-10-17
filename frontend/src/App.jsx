@@ -8,134 +8,70 @@ import "./App.css";
 
 // =========================================================
 
-const PRODUCTS_API = "http://127.0.0.1:8000/products";
-
-const ORDERS_API = "http://127.0.0.1:8000/orders";
-const AUTH_API = "http://127.0.0.1:8000/auth";
-const CUSTOMER_ADDRESSES_API = "http://127.0.0.1:8000/customer/addresses";
+c
+const PRODUCTS_API = "https://beervana.onrender.com/products";
+const ORDERS_API = "https://beervana.onrender.com/orders";
+const AUTH_API = "https://beervana.onrender.com/auth";
+const CUSTOMER_ADDRESSES_API = "https://beervana.onrender.com/customer/addresses";
 const AUTH_TOKEN_KEY = "beervana_access_token";
 const CUSTOMER_KEY = "beervana_customer";
-
-// =========================================================
-
 // PRODUCT IMAGES
-
-// =========================================================
-
 const productImages = [
-
   "/images/corona.png",
-
   "/images/hoegaarden.png",
-
   "/images/budweiser.png",
-
   "/images/heineken.png",
-
   "/images/kingfisher.png",
-
   "/images/bira.png",
-
   "/images/carlsberg.png",
-
 ];
-
-// =========================================================
-
 // CATEGORIES
-
-// =========================================================
-
 const categories = [
-
   "All",
-
   "Lager",
-
   "Wheat Beer",
-
   "Strong Beer",
-
   "Craft Beer",
-
   "Classic",
-
   "Stout",
-
   "IPA",
-
   "Pilsner",
-
   "Others",
-
 ];
-
 const categoryIcons = {
-
   All: "🍺",
-
   Lager: "🍻",
-
   "Wheat Beer": "🌾",
-
   "Strong Beer": "💪",
-
   "Craft Beer": "🌿",
-
   Classic: "🍺",
-
   Stout: "🖤",
-
   IPA: "🌱",
-
   Pilsner: "🥂",
-
   Others: "🍾",
-
 };
-
-// =========================================================
 
 // FALLBACK PRODUCTS
 
-// =========================================================
-
 const fallbackProducts = [
-
   {
-
     id: 1,
-
     name: "Corona Extra",
-
     category: "Lager",
-
     description: "Classic refreshing lager",
-
     price: 199,
-
     image: "",
-
     stock: 20,
-
   },
 
   {
-
     id: 2,
-
     name: "Hoegaarden",
-
     category: "Wheat Beer",
-
     description: "Belgian style wheat beer",
-
     price: 249,
-
     image: "",
-
     stock: 15,
-
   },
 
   {
@@ -177,31 +113,19 @@ const fallbackProducts = [
   {
 
     id: 5,
-
     name: "Kingfisher",
-
     category: "Classic",
-
     description: "India's classic beer",
-
     price: 169,
-
     image: "",
-
     stock: 25,
-
   },
 
   {
-
     id: 6,
-
     name: "Bira 91",
-
     category: "Craft Beer",
-
     description: "Modern craft beer",
-
     price: 229,
 
     image: "",
