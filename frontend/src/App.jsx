@@ -8,7 +8,6 @@ import "./App.css";
 
 // =========================================================
 
-c
 const PRODUCTS_API = "https://beervana.onrender.com/products";
 const ORDERS_API = "https://beervana.onrender.com/orders";
 const AUTH_API = "https://beervana.onrender.com/auth";
